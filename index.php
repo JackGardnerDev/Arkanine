@@ -116,7 +116,7 @@
     <!-- <script src=assets/js/matrix.js></script> -->
 
     <!-- forum -->
-    <form id="forum_form" action="index.php" method="post">
+    <form id="forum_form" action="index.php" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <textarea id="forum_input" name="comment" rows="5" cols="40" placeholder="Make a post" required></textarea>
     <input id="forum_submit" type="submit" value="Post">
     </form>
@@ -133,6 +133,12 @@
         } else {
           $comment = test_input($_POST["comment"]);
         }
+    }
+
+    $comment = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $comment = test_input($_POST["comment"]);
     }
 
     function test_input($data) {
