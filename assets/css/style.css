@@ -1,0 +1,279 @@
+/* All Styling */
+
+/* Body */
+
+html{
+    background-color: #000000;
+  }
+  
+  body{
+    background: black;
+    font-family: 'Times New Roman';
+    color: #008000;
+    text-align: center;
+    font-size: large;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  
+  .headerContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  img {
+    max-width: 100%
+  }
+  
+  .headerImage {
+    width: 450px;
+    margin: 20px;
+  }
+  
+  .headerText {
+    font-size: 20px;
+    padding-left: 20px;
+    width: 450px;
+    margin: 20px;
+    text-align: center;
+    line-height: 200px;
+    height: 200px;
+  }
+
+  .headerText h1 {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Link */
+  
+  a:link {
+    text-decoration: underline;
+    color: #008000;
+  }
+  
+  a:visited {
+    text-decoration: underline;
+    color: #008000;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+  
+  /* Login and Register Page */
+  
+  .login{
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .error{
+    color: red;
+    padding: 10px;
+    text-align: center;
+    min-height: 42px;
+  }
+  
+  .container{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 10fr;
+    gap: 10px;
+  }
+  
+  main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  section{
+    width: 450px;
+    margin: 20px;
+    border: #E9E9EA solid 2px;
+    border-radius: .25rem;
+  }
+  
+  section h2{
+    background-color: #F7F7F9;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: calc(.25rem - 2px);
+    border-top-right-radius: calc(.25rem - 2px);
+    border-bottom: #E9E9EA solid 2px;
+  }
+  
+  form label{
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  form{
+    padding: 20px;
+  }
+  
+  form button{
+    display: block;
+    margin: 20px auto;
+    background-color: #008000;
+    color: white;
+    border: #008000 solid thin;
+    border-radius: .25rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  form button:hover{
+    transition: background-color 0.5s;
+    background-color: #008000;
+  }
+  
+  form input{
+    width: 100%;
+    border: #E9E9EA solid 2px;
+    border-radius: .25rem;
+    padding: 6px 10px;
+    margin-bottom: 15px;
+  
+  }
+  
+  form input:focus {
+    outline: none;
+  }
+  
+  form input:invalid{
+    border-color: #008000;
+  }
+
+  /* Static Image Hover */
+
+  @keyframes pulse {
+    from, to {
+      scale: 1;
+    }
+    
+    50% {
+      scale: 1.08;
+    }
+  }
+  
+  #card:hover > img {
+    animation: pulse 800ms ease-in-out;
+    filter: url(#noise);
+  }
+  
+  @media(max-width: 768px) {
+    #card {
+      width: 100%;
+    }
+  }
+
+  /* Centered Main Text */
+
+  .centered {
+    top: 25%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Forum Input */
+
+  #forum_form {
+    text-align: center; 
+  }
+
+  #forum_input{
+    width: 40%;
+    border: #008000 solid 1px;
+    border-radius: .25rem;
+    background-color: #000000;
+    color: #008000;
+    padding: 5px 5px;
+  }
+
+  #forum_input:focus{
+    outline: none;
+  }
+
+  #forum_input:invalid{
+    border-color: #008000;
+  }
+
+  #forum_submit{
+    width: 40%;
+    border: #E9E9EA solid 2px;
+    border-radius: .25rem;
+    display: block;
+    margin: 20px auto;
+    background-color: #008000;
+    color: white;
+    border: #008000 solid thin;
+    border-radius: .25rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  #forum_submit:hover{
+    transition: background-color 0.5s;
+    background-color: #008000;
+  }
+
+  /* Forum Text */
+
+  .form_text {
+    display: center;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    left: 30.5%;
+    max-width: 82.5ch;
+  }
+
+  /* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Scroll-able section */
+
+.scrollable {
+  padding: 0px 0px;
+  margin: 75px 0px;
+  height: 411px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
